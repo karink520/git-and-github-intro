@@ -26,5 +26,6 @@ TBD: Please drop in with any questions, or if you run into trouble with the pre-
 
 ## Workshop materials
 [Slides](git_workshop_slides.pdf)
+
 [Workshop instructions](git_workshop.md)
 
