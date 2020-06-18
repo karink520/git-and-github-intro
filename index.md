@@ -24,4 +24,4 @@ TBD: Please drop in with any questions, or if you run into trouble with the pre-
 ## Workshop materials
 
 1. Slides (to be posted)
-2. [Workshop instructions](git-workshop.md)
+2. [Workshop instructions](git_workshop.md)
