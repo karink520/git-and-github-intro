@@ -292,7 +292,7 @@ Now let's say you want to contribute to someone else's project, but you're not a
 
     If you want to know the right url to use above, you can click the "Clone or download" on GitHub in your new copy of the repository.  Cloning not only copies the repository locally, but connects the local copy to the remote repository and names the remote "origin".
 
-**Note:** If all you wanted to do was copy somebody's project and use it as a starting point for your own, you're now done.  You have a local and remote repository that are copies of the original, and you can work with them as much as you want without changing the original repository that someone else owns on GitHub. If you want to actually *contribute back* to the original project, you'll want to follow the following steps.
+    **Note:** If all you wanted to do was copy somebody's project and use it as a starting point for your own, you're now done.  You have a local and remote repository that are copies of the original, and you can work with them as much as you want without changing the original repository that someone else owns on GitHub. If you want to actually *contribute back* to the original project, you'll want to follow the following steps.
 
 3. Connect your local repository back to the *original* repository that you forked.  This means your local repository will be connected to *two different remote repositories* - one connection to your own GitHub account, and another to the repository from which you forked.  To make the connection, use: 
 
