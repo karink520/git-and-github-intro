@@ -21,7 +21,7 @@ With your web browser, navigate to the repository on your GitHub account.  Click
 
 **If you want to use someone else's existing repository on GitHub as a jumping off point:**
 
-See part V on forking.
+See part VI on forking a repository.
 
 <div style="page-break-after: always;"></div>
 <br>
