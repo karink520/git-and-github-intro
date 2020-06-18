@@ -210,9 +210,9 @@ As your project or your team gets larger, you may want to separate out work on d
 
     `git checkout -b mybranchname`
 
-    Instead of `mybranchname`, you can name the branch anything you like, just aim to keep it short and descriptive of the work you are planning to do on it (e.g. are you adding a certain feature or functionality to your code? are you fixing a bug?).  (Note: if you were to to aready have an existing branch that you want to move to, you could omit the `-b` flag in the command above to just move to that branch, without creating a new one).
+    Instead of `mybranchname`, you can name the branch anything you like, just aim to keep it short and descriptive of the work you are planning to do on it (e.g. are you adding a certain feature or functionality to your code? are you fixing a bug?).  Note: if you were to to aready have an existing branch that you want to move to, you could omit the `-b` flag in the command above to just move to that branch, without creating a new one.
 
-3. Make changes to your repository
+3. Make changes to your repository.
 
 4. Check the status with:
 
@@ -225,7 +225,7 @@ As your project or your team gets larger, you may want to separate out work on d
 6. Commit the changes with:
     `git commit -m "informative message here"`
 
-7. Repeat the previous three steps as desired, making and committing changes
+7. Repeat the previous four steps as desired, making and committing changes.
 
 8. Retrieve and incorporate any changes from the remote repository with: 
 
@@ -286,11 +286,16 @@ Now let's say you want to contribute to someone else's project, but you're not a
 
 1. In your web browser, navigate to the repository on GitHub that you wish to use as a starting point.  On the top right of the window, you'll see "Fork" with an icon and a number next to it.  Click on "Fork" to fork the repository, which means making a copy of the repository.  The copy  gets added to your own GitHub account, and you are its owner.  Thus, once you've forked the repository, you can make changes to the copy without changing the original project that you forked.
 
-2. Clone the repository that you've forked.  Forking creates a copy of someone else's GitHub repository on your own GitHub account.  Cloning creates a copy of a remote repository that you own (e.g. the repository that your fork created!) on your local machine.
+2. Clone the repository that you've forked.  Forking creates a copy of someone else's GitHub repository on your own GitHub account.  Cloning creates a copy of a remote repository that you own (e.g. the repository that your fork created!) on your local machine. Type something like:
 
-If all you wanted to do was copy somebody's project and use it as a starting point for your own, you're now done.  You have a local and remote repository that are copies of the original, and you can work with them as much as you want without changing the original repository that someone else owns on GitHub. If you want to actually *contribute back* to the original project, you'll want to follow the following steps.
+    `git clone https://github.com/your_user_name_here/repository here.git`
 
-3. Connect your local repository back to the original repository that you forked.  This means your local repository will be connected to *two different remote repositories* - one connection to your own GitHub account, and another to the repository from which you forked.  To make the connection, use: 
+If you want to know the right url to use above, you can click the "Clone or download" on GitHub in your new copy of the repository.  Cloning not only copies the repository locally, but connects the local copy to the remote repository and names the remote "origin".
+
+**Note:** If all you wanted to do was copy somebody's project and use it as a starting point for your own, you're now done.  You have a local and remote repository that are copies of the original, and you can work with them as much as you want without changing the original repository that someone else owns on GitHub. If you want to actually *contribute back* to the original project, you'll want to follow the following steps.
+
+
+3. Connect your local repository back to the *original* repository that you forked.  This means your local repository will be connected to *two different remote repositories* - one connection to your own GitHub account, and another to the repository from which you forked.  To make the connection, use: 
 
     `git remote add name_for_remote git://github.com/other_user/their_repo_name`,
 
@@ -298,7 +303,7 @@ where you include your own short name for the remote (`upstream` is common, but 
 
 4. Edit the files, and use Git to add and commit the changes.
 
-5. Push the committed changes to your own remote repository on your GitHub account (recall that it's has the short name `origin`), by typing:
+5. Push the committed changes to your own remote repository on your GitHub account (recall that it has the short name `origin`), by typing:
 
     `git push origin master`
 
@@ -310,7 +315,7 @@ where you include your own short name for the remote (`upstream` is common, but 
 
     `git merge upstream/master`
 
-    (Recall that upstream refers to the original repository on someone else's GitHub account.)
+    (Here upstream refers to the original repository on someone else's GitHub account.)
 
 With these skills, you can make valuable contributions to others' projects and to open source software!
 
