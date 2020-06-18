@@ -1,13 +1,12 @@
 # Install Git
 
 ## MacOS
-One easy way to install git is to install the Xcode Command Line Tools package which include Git, as well as a number of other tools.
+One easy way to install Git is to install the Xcode Command Line Tools package which include Git, as well as a number of other tools.
 
-1. Open the Terminal app
-The terminal comes pre-installed on your Mac, so you have it even if you have not used it yet.
-You can find it with a Spotlight Search or in the Utilities folder that is found within the Applications folder.
+1. Open the Terminal app. Terminal comes pre-installed on your Mac.
+You can find it with a Spotlight Search or in the Utilities folder within the Applications folder.
 2. Type into the Terminal the following text: `xcode-select —install` and press return.  You'll be asked to confirm the installation, and once you do, the installation will begin.
-3. Once the installation finishes successfully, you'll have Git!  Double check that you have Git by opening a new Terminal window and typing:
+3. Once the installation finishes successfully, you'll have Git. Double check by opening a new Terminal window and typing:
 
    `git --version`
    
