@@ -112,7 +112,7 @@ Type:
 8. If time permits, repeat steps 1-7 to practice the entire process again.
 
 Great work! Take a moment to celebrate. If you are working by yourself or in a small team, that might be your entire workflow with Git and GitHub! If it seems like a lot at once,
-post a reference to the commands somwhere handy and remember the overall flow: incorporate changes from the remote repository by using fetch and merge, make your changes and the commit them, using status, add, and commit, incorporate any additional changes from the remote repository with fetch and merge, and push your changes back to the remote repository. For reference, here's a concise list of the steps:
+post a reference to the commands somwhere handy and remember the overall flow: incorporate changes from the remote repository by using fetch and merge, make your changes and the commit them, using status, add, and commit, incorporate any additional changes from the remote repository with fetch and merge, and push your changes back to the remote repository. For reference, here's a more concise list of the steps:
 
 `git fetch origin`
 
@@ -137,8 +137,6 @@ post a reference to the commands somwhere handy and remember the overall flow: i
 `git add name_of_edited_file`
 
 `git add name_of_another_edited_file`
-
-(etc., using the actual names of your files instead of name_of_edited_file or name_of_another_edited_file)
 
 `git commit -m "include an informative message here"`
 
@@ -380,5 +378,7 @@ This [tutorial](https://kbroman.org/github_tutorial/) bills itself as “a minim
 
 [Atlassian's tutorial site](https://www.atlassian.com/git/tutorials) includes detailed guides about Git. Atlassian makes BitBucket, which is another web-based hosting system for version control repositories and an alternative to GitHub.  The the tutorials around Git itself are applicable to both GitHub and BitBucket. They also have
  a helpful [Git cheat-sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
+ 
+ A short [reference and explainer](https://karinknudson.com/git_workflow.html) for the workflows above
 
 A [lecture](https://missing.csail.mit.edu/2020/version-control/) from MIT CSAIL's "Missing Semester", a lecture and bottom-up explanation of Git that is very helpful if you want to understand how Git works underneath the interface.
