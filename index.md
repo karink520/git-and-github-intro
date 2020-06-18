@@ -14,8 +14,8 @@ Git and GitHub are valuable tools for researchers who work with code.  They faci
 
 ## Before the workshop
 
-1. Install Git, following these instructions.
-2. Create an account on [GitHub] (https://github.com).
+1. Install Git, following these [instructions](intall_git.md).
+2. Create an account on [GitHub](https://github.com).
 3. Complete the pre-course survey.
 
 Pre-course video-conference office hours:
