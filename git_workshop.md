@@ -44,6 +44,7 @@ In the above two lines, we convention by giving the remote repository the short 
 Note that we could have given it a different name instead of origin, and later on we'll see good reasons for a remote repository to have a different name.
 
 <div style="page-break-after: always;"></div>
+<br>
 
 ## III. Learn and practice a simple Git workflow (with with Git commands `fetch`, `merge`, `status`, `add`, `commit`, `push`)
 
