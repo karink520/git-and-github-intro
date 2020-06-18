@@ -174,7 +174,7 @@ This is the other version of this line.
 more content
 ```
 
-The text between <<<< and >>>>>> is showing you both (conflicting!) versions of the line. The first part is the version in the current branch.  The second version, after the `======`, comes from the branch you were trying to merge.  So if you had started the merge with `git merge origin/master`, you'd see your changes on the current branch above the `======`, and the changes that you retrieved from the master branch of your remote repository below the `======` (these would likely be changes from a collaborator).
+    The text between <<<< and >>>>>> is showing you both (conflicting!) versions of the line. The first part is the version in the current branch.  The second version, after the `======`, comes from the branch you were trying to merge.  So if you had started the merge with `git merge origin/master`, you'd see your changes on the current branch above the `======`, and the changes that you retrieved from the master branch of your remote repository below the `======` (these would likely be changes from a collaborator).
 
 3. Edit the file in the text editor so the conflicted line looks how you want it to be.  Maybe you keep one of the existing versions of the lie or maybe you replace them both with a mix of the two or something better. In the end, the file should look just how you want it to look going forward (with no more <<<< or ==== type extras!).  Save the file. If you have multiple conflicts and/or conflicts in multiple files, edit each conflicted line in this way.
 
@@ -196,7 +196,7 @@ The text between <<<< and >>>>>> is showing you both (conflicting!) versions of 
 
 ## V. A workflow with branches and pull requests
 
-As your project or your team gets larger, you may want to separate out work on different features of your project from the main project itself. You also might want to have someone review a team members committed changes before they get incorporated into the master branch of the remote repository. In general, using branches and pull requests promotes code quality by helping us avoid changing the master branch until we have something worthwhile and high quality to add. It also promotes collaboration by allowing space for collaborators to discuss before including one person's change into the master branch of the remote repository.
+As your project or your team gets larger, you may want to separate out work on different features of your project from the main project itself. You also might want to have someone review a team member's committed changes before they get incorporated into the master branch of the remote repository. In general, using branches and pull requests promotes code quality by helping us avoid changing the master branch until we have something worthwhile and high quality to add. It also promotes collaboration by allowing space for collaborators to have a discussion before including someone's change into the master branch of the remote repository.
 
 1. Retrieve and incorporate any changes from the remote repository with:
 
@@ -339,12 +339,12 @@ With these skills, you can make valuable contributions to others' projects and t
 ### Undoing changes and reverting to previous commits (and some notes of caution!):
 
 Type `git log` and you'll see a list of commits.  They each have a long string of letters and numbers, which is a hash that identifies them, as well as the commit message you wrote.
-Maybe one of those commits is better than what you have now and you'd like to go back to it.  There are a few different ways to do this, depending on what exactly you're trying to do. To understand these options, see: https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things, https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting, and overview this blog post: https://stackabuse.com/git-revert-to-a-previous-commit/.  **CAUTION**: As these resources note, b careful with commands like `git reset` (especially `git reset --hard`) and `git checkout` (especially in the context of `git checkout --file`) - these commands can lead to losing work permanently.
+Suppose the state of the code at one of those commits is better than what you have now and you'd like to go back to it.  There are a few different ways to do this, depending on what exactly you're trying to do. To understand these options, see: https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things, https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting, and overview this blog post: https://stackabuse.com/git-revert-to-a-previous-commit/.  **CAUTION**: As these resources note, b careful with commands like `git reset` (especially `git reset --hard`) and `git checkout` (especially in the context of `git checkout --file`) - these commands can lead to losing work permanently.
 
 ### Seeing what has changed with git diff
 You can use <a href="https://git-scm.com/docs/git-diff">git diff</a> to make comparisons, e.g. between two different commits.
 
-### Have files that you don't want to track?  Add them to a gitignore file.
+### Have files that you don't want to track?  Add them to a .gitignore file.
 
 If you have files in your repository's folder that you don't want to track, you *could* just omit them from your
 `git add` statements.  But you may want to be a little more careful, so that you don't start tracking them by accident (especially if they contain sensitive content that you do not want to share on GitHub).  You can create a file with the name `.gitignore` and put in it a list of files that you want git to ignore, and those files will remain untracked.  You can also use .gitignore to make sure that Git ignores all files that match a certain pattern, such as all files that end in `.zip`.  See more information here https://help.github.com/en/github/using-git/ignoring-files and an example .gitignore file here https://gist.github.com/octocat/9257657.
@@ -364,9 +364,9 @@ Using [GitHub Pages](https://pages.github.com/) is an easy way to host public we
 
 ## VIII. Resources
 
-There are MANY resources on the internet for learning Git, whether you want an in -depth tutorial or are trying to answer a specific question. See what you can discover with searching; for specific questions, StackOverflow is a great resource!
+There are MANY resources on the internet for learning Git, whether you want an in-depth tutorial or are trying to do a particular task. See what you can discover with searching; for specific questions, StackOverflow is a great resource.
 
-Here are a few particular resources that might be useful:
+Here are a few additional resources that might be useful:
 
 [Dangit, Git!?!](https://dangitgit.com/) is a great resource for getting yourself out of trouble with Git.
 
