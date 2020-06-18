@@ -357,6 +357,9 @@ You can connect to GitHub and authenticate with SSH, instead of entering your pa
 ### Use GitHub actions for continuous integration (CI), and keep your code high quality:
 GitHub actions allow you to automatically run certain steps or checks every time someone on your project makes a pull request.  For example, you might want a test suite to run, or you might want to run a Python linter to check syntaxing or formatting.  You can read more about GitHub actions here: https://github.com/features/actions.
 
+### GitHub Pages
+Using GitHub pages is an easy way to host public webpages (such as the website for this workshop!)
+
 
 <div style="page-break-after: always;"></div>
 <br>
