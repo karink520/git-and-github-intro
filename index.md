@@ -16,7 +16,7 @@ Git and GitHub are valuable tools for researchers who work with code.  They faci
 
 ## Before the workshop
 
-1. Install Git, following these [instructions](intall_git.md). (10 min)
+1. Install Git, following these [instructions](install_git.md). (10 min)
 2. Create an account on [GitHub](https://github.com). (5 min)
 3. If you have never used the terminal / command prompt before, go through this [introductory tutorial](https://tutorial.djangogirls.org/en/intro_to_command_line/). The commands you will need to know for this course are ls (for Mac and Linux users), dir (for Windows users), and cd (for everyone). (15 min)
 4. Complete the pre-course survey (5 min).
@@ -25,6 +25,5 @@ Pre-course video-conference office hours:
 TBD: Please drop in with any questions, or if you run into trouble with the pre-workshop steps
 
 ## Workshop materials
-
-1. Slides (to be posted)
+1. Slides (git_workshop_slides.pdf)
 2. [Workshop instructions](git_workshop.md)
