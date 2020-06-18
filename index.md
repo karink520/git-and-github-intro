@@ -25,7 +25,6 @@ Pre-course video-conference office hours:
 TBD: Please drop in with any questions, or if you run into trouble with the pre-workshop steps
 
 ## Workshop materials
-<ul>
-<li>[Slides](git_workshop_slides.pdf)</li>
-<li>[Workshop instructions](git_workshop.md)</li>
-</ul>
+[Slides](git_workshop_slides.pdf)
+[Workshop instructions](git_workshop.md)
+
