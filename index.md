@@ -2,7 +2,7 @@
 
 ## Description
 
-Git and GitHub are valuable tools for researchers who work with code.  They facilitate version control and collaboration and can help you make your research code better, safer, and more impactful in the broader community. This workshop is a practical introduction to Git and GitHub, intended to give participants the information and practice they need to start using these tools right away.
+Git and GitHub are valuable tools for any researchers who work with code.  They allow for version control, facilitate collaboration, and can help you make your research code better, safer, and more impactful in the broader community. This workshop is a practical introduction to Git and GitHub, intended to give participants the information and practice they need to start using these tools right away.
 
 ## Goals
 
