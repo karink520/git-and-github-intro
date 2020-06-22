@@ -382,3 +382,6 @@ This [tutorial](https://kbroman.org/github_tutorial/) bills itself as “a minim
  A short [reference and explainer](https://karinknudson.com/git_workflow.html) for the workflows above
 
 A [lecture](https://missing.csail.mit.edu/2020/version-control/) from MIT CSAIL's "Missing Semester", a lecture and bottom-up explanation of Git that is very helpful if you want to understand how Git works underneath the interface.
+
+[Instructions](https://dev.to/rhymu8354/git-renaming-the-master-branch-137b) for how to rename the default branch: 
+
