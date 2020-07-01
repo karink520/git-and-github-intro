@@ -90,7 +90,7 @@ Type:
     
     In general, replace the message in quotation marks with a message about what you did &mdash; what bug did you fix, or what functionality did you add?
 
-5. Repeat steps 3 and 4 a few times, making changes and committing those changes with a new message each time.  (This step is for practice with the workflow, but also to mimic what you willreally do with Git, where you are likely to make several commits locally before you arrive at something you would like to push back up to the remote repository.)
+5. Repeat steps 3 and 4 a few times, making changes and committing those changes with a new message each time.  (This step is for practice with the workflow, but also to mimic what you will really do with Git, where you are likely to make several commits locally before you arrive at something you would like to push back up to the remote repository.)  Try typing `git log` to see a record of your commits, with the most recent at the top (and/or type `git log --all --graph --decorate` for another view of your commits).
 
 6. Now you'll want to include any changes that have been made to the remote repository while you were making your own changes (in this toy example, of course we'll be up to date, but in real life you might not know if a collaborator might have changed something while you were working).  We'll repeat steps 1-2.
 
@@ -108,11 +108,11 @@ Type:
 
     If you go to your GitHub account in your web browser, you should now be able to see the most recent changes you made now included in your files.
 
-8. If time permits, repeat steps 1-7 to practice the entire process again. Type `git log` to see a record of your commits, with the most recent at the top (and/or try `git log --all --graph --decorate` for another view of your commits).
+8. If time permits, repeat steps 1-7 to practice the entire process again.
 
-9. (Optional) Practice undoing a commit. There are several different ways you might want to "undo" something in Git, and several corresponding commands. One nondestructive way to undo a commit is with `git revert HEAD`, which will create a new commit that is the inverse of the previous commit. This will take your code back to the state it was in before (but will still keep a record of the previous commit that you chose to "undo").
+9. *(Optional)* Practice undoing a commit. There are several different ways you might want to "undo" something in Git, and several corresponding commands. One nondestructive way to undo a commit is with `git revert HEAD`, which will create a new commit that is the inverse of the previous commit. This will take your code back to the state it was in before (but will still keep a record of the previous commit that you chose to "undo").
 
-10. (Optional) Now let's practice looking back at the state of your project in an older commit. Make sure you have committed all of your changes, and then type something like `git checkout 66e77`, where the numbers and digits are the first few characters of the hash for one of your commits – find them by typing `git log` and picking a commit to go back to. Your files will change to the state they were in for the commit you just checked out - take a look around and notice how your files have all changed to their older versions from the commit you checked out! You are now working in a detached HEAD state - you can look around and explore, but while in this state you don't want to develop or make any changes that you'd want to keep. Before you keep developing and editing, move back to where you were working (in this case the master branch) with: 
+10. *(Optional)* Now let's practice looking back at the state of your project in an older commit. Make sure you have committed all of your changes, and then type something like `git checkout 66e77`, where the numbers and digits are the first few characters of the hash for one of your commits – find them by typing `git log` and picking a commit to go back to. Your files will change to the state they were in for the commit you just checked out - take a look around and notice how your files have all changed to their older versions from the commit you checked out! You are now working in a detached HEAD state - you can look around and explore, but while in this state you don't want to develop or make any changes that you'd want to keep. Before you keep developing and editing, move back to where you were working (in this case the master branch) with: 
 
 `git checkout master`
 
