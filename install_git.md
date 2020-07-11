@@ -19,7 +19,7 @@ You can find it with a Spotlight Search or in the Utilities folder within the Ap
 
     This configuration will set up Git to associate your name and email to changes that you commit to your project.
 
-Troubleshooting: You may not be able to complete the following steps if you're running an older MacOS, such as 10.12 or earlier.  In this case, you can update your MacOS first (note that this may take some time and require a restart), and then follow the steps above.
+Troubleshooting: You may not be able to complete the preceding steps if you're running an older MacOS, such as 10.12 or earlier.  In this case, you can update your MacOS first (note that this may take some time and require a restart), and then follow the steps above.
 
 ## Linux
 
