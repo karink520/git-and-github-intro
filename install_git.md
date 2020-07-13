@@ -27,7 +27,7 @@ Troubleshooting: You may not be able to complete the preceding steps if you're r
 
     `apt-get install git`
 
-     For other Linux distributions, see the analogous commands [here](https://git-scm.com/download/linux)
+     For other Linux distributions, see the analogous commands [here](https://git-scm.com/download/linux).
 2. Once the installation finishes successfully, you'll have Git!  Double check that you have Git by opening a new Terminal window and typing:
 
    `git --version`

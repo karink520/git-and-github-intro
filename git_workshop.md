@@ -5,7 +5,7 @@
 2. Navigate to that directory in the terminal.  (On Windows, you can use the Command Prompt or Git Bash).  To navigate use `cd` and `ls` if you are on Mac or Linux, `cd` and `dir` if you're on Windows.
 3. Make a new file called `ReadMe.txt` and add some text to it (just a sentence is fine), and save it.
 4. Type `git init` in the terminal; this will create the repository. You can see all the files in your folder (even the hidden ones), by using `ls -a`, you so you can use this to see the new folder called `.git` that was created when you ran `git init`.
-5.  Type `git add ReadMe.txt` to tell Git to start tracking the `ReadMe.txt` file and to include this file in the next commit.  (If you want, try entering `git status` before you do this step and then again afterwards to see what changes.) 
+5.  Type `git add ReadMe.txt` to tell Git to start tracking the `ReadMe.txt` file and to include this file in the next commit (i.e. to add it to the staging area).  If you want, try entering `git status` before you do this step and then again afterwards to see what changes.
 6. Make a first commit by typing: 
     `git commit -m "this is my first commit!`
 
@@ -29,14 +29,14 @@ See part VI on forking a repository.
 ## II. Connect your new repository to GitHub
 
 1. Log in to GitHub.
-2. Click "New Repository" in the upper left and fill out the form to give your repository a name.
+2. Click "New" in the upper left and fill out the form to give your repository a name.
 3. Follow the instructions under "Push an  existing repository", which will ask you to enter some code back in the terminal/command line that is analogous to the following, but with your own repository url filled in:
 
     `git remote add origin https://github.com/username/new_repo`
 
     `git push -u origin master`
 
-4. Check that the example file you made in part I should shows up in your account on GitHub!
+4. Check that the example file you made in part I should shows up in your account on GitHub! (You should see it under the code tab.)
 
 You now have a local repository on your computer that is connected to a remote repository on GitHub.
 In step 3, we followed convention by giving the remote repository the short name of `origin` (its longer name is something like `https://github.com/username/new_repo`, but we don't want to type that out all the time!). When you see `origin` throughout this workshop, you should be thinking about the repository living remotely, on GitHub, rather than the the local one on your computer.
@@ -98,11 +98,11 @@ Type:
 
     `git fetch origin`
 
-    Then type
+    Then type:
 
     `git merge origin/master`
 
-7. All of your committing just saved changes locally.  Now you need to send those changes off to the remote repository on GitHub (remember that the remote repository has the short name origin).  We'll send our changes off to the remote repository with the `git push` command.  Type:
+7. All of your committing just saved changes locally.  Now you need to send those changes off to the remote repository on GitHub (remember that the remote repository has the short name `origin`).  We'll send our changes off to the remote repository with the `git push` command.  Type:
 
     `git push origin master`
 
@@ -114,7 +114,7 @@ Type:
 
 10. *(Optional)* Now let's practice looking back at the state of your project in an older commit. Make sure you have committed all of your changes, and then type something like `git checkout 66e77`, where the numbers and digits are the first few characters of the hash for one of your commits – find them by typing `git log` and picking a commit to go back to. Your files will change to the state they were in for the commit you just checked out - take a look around and notice how your files have all changed to their older versions from the commit you checked out! You are now working in a detached HEAD state - you can look around and explore, but while in this state you don't want to develop or make any changes that you'd want to keep. Before you keep developing and editing, move back to where you were working (in this case the master branch) with: 
 
-`git checkout master`
+    `git checkout master`
 
 Great work! Take a moment to celebrate. If you are working by yourself or in a small team, that might be your entire workflow with Git and GitHub! 
 
@@ -132,8 +132,6 @@ post a reference to the commands somewhere handy and keep in mind the overall fl
 `git add name_of_edited_file`
 
 `git add name_of_another_edited_file`
-
-(etc., using the actual names of your files instead of name_of_edited_file or name_of_another_edited_file)
 
 `git commit -m "include an informative message here"`
 
@@ -180,7 +178,7 @@ This is the other version of this line.
 more content
 ```
 
-    The text between <<<< and >>>>>> is showing you both (conflicting!) versions of the line. The first part is the version in the current branch.  The second version, after the `======`, comes from the branch you were trying to merge.  So if you had started the merge with `git merge origin/master`, you'd see your changes on the current branch above the `======`, and the changes that you retrieved from the master branch of your remote repository below the `======` (these would likely be changes from a collaborator).
+The text between <<<< and >>>>>> is showing you both (conflicting!) versions of the line. The first part is the version in the current branch.  The second version, after the `======`, comes from the branch you were trying to merge.  So if you had started the merge with `git merge origin/master`, you'd see your changes on the current branch above the `======`, and the changes that you retrieved from the master branch of your remote repository below the `======` (these would likely be changes from a collaborator).
 
 3. Edit the file in the text editor so the conflicted line looks how you want it to be.  Maybe you keep one of the existing versions of the lie or maybe you replace them both with a mix of the two or something better. In the end, the file should look just how you want it to look going forward (with no more <<<< or ==== type extras!).  Save the file. If you have multiple conflicts and/or conflicts in multiple files, edit each conflicted line in this way.
 
@@ -202,7 +200,7 @@ more content
 
 ## V. A workflow with branches and pull requests
 
-As your project or your team gets larger, you may want to separate out work on different features of your project from the main project itself. You also might want to have someone review a team member's committed changes before they get incorporated into the master branch of the remote repository. In general, using branches and pull requests promotes code quality by helping us avoid changing the master branch until we have something worthwhile and high quality to add. It also promotes collaboration by allowing space for collaborators to have a discussion before including someone's change into the master branch of the remote repository.
+As your project or your team gets larger, you may want to separate out work on different features of your project from the main project itself. You also might want to have someone review a team member's committed changes before they get incorporated into the master branch of the remote repository. In general, using branches and pull requests promotes code quality by helping us avoid changing the master branch until we have something worthwhile and high quality to add. They also promotes collaboration by allowing space for collaborators to have a discussion before including someone's change into the master branch of the remote repository.
 
 1. Retrieve and incorporate any changes from the remote repository with:
 
@@ -374,20 +372,22 @@ There are MANY resources on the internet for learning Git, whether you want an i
 
 Here are a few additional resources that might be useful:
 
+ A short [reference and explainer](https://karinknudson.com/git_workflow.html) for the workflows we used in this workshop.
+
 [Dangit, Git!?!](https://dangitgit.com/) is a great resource for getting yourself out of trouble with Git.
 
 [GitHub Guides](https://guides.github.com/introduction/git-handbook/ ) includes resources about Git and GitHub.
 
 This [resource](https://learngitbranching.js.org/) is a browser game for learning about Git branching.
 
-This [tutorial](https://kbroman.org/github_tutorial/) bills itself as “a minimal tutorial”, and is a good concise reference.
+This [tutorial](https://kbroman.org/github_tutorial/) bills itself as “a minimal tutorial”, and is a concise reference.
 
 [Atlassian's tutorial site](https://www.atlassian.com/git/tutorials) includes detailed guides about Git. Atlassian makes BitBucket, which is another web-based hosting system for version control repositories and an alternative to GitHub.  The the tutorials around Git itself are applicable to both GitHub and BitBucket. They also have
  a helpful [Git cheat-sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
- 
- A short [reference and explainer](https://karinknudson.com/git_workflow.html) for the workflows above
 
-A [lecture](https://missing.csail.mit.edu/2020/version-control/) from MIT CSAIL's "Missing Semester", a lecture and bottom-up explanation of Git that is very helpful if you want to understand how Git works underneath the interface.
+A [lecture](https://missing.csail.mit.edu/2020/version-control/) from MIT CSAIL's "Missing Semester", a lecture and bottom-up explanation of Git that is very helpful if you want to understand how Git works behind its interface.
 
-[Instructions](https://dev.to/rhymu8354/git-renaming-the-master-branch-137b) for how to rename the default branch: 
+[Pro Git](https://git-scm.com/book/en/v2) (book, available free online) is a thorough resource.
+
+[Instructions](https://dev.to/rhymu8354/git-renaming-the-master-branch-137b) for how to rename the default branch.
 
