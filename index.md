@@ -19,7 +19,6 @@ Git and GitHub are valuable tools for any researchers who work with code.  They 
 1. If you have never used the terminal / command prompt before, go through this [introductory tutorial](https://tutorial.djangogirls.org/en/intro_to_command_line/). The commands you will need to know for this course are ls (for Mac and Linux users), dir (for Windows users), and cd (for everyone). (15 min)
 2. Install Git, following these [instructions](install_git.md). (10 min)
 3. Create an account on [GitHub](https://github.com). (5 min)
-4. Complete the [pre-course survey](https://forms.gle/AH7Yghe2ShFEVv227) (5 min).
 
 Pre-course video-conference office hours:
 TBD: Please drop in with any questions, or if you run into trouble with the pre-workshop steps
