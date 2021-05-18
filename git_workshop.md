@@ -1,12 +1,18 @@
+## 0. Finish configuring Git.
+
+You should have already installed Git and configured it following the instructions [here](https://karink520.github.io/git-and-github-intro/install_git.html). We'll add one more configuration, to set the default branch name to `main`. Type the following into the terminal
+
+`git config --global init.defaultBranch main`
 
 ## I. Start a new git repository (with Git `init`)
 
 1. Create a directory (folder) that will contain the files for your project.
 2. Navigate to that directory in the terminal.  (On Windows, you can use the Command Prompt or Git Bash).  To navigate use `cd` and `ls` if you are on Mac or Linux, `cd` and `dir` if you're on Windows.
 3. Make a new file called `ReadMe.txt` and add some text to it (just a sentence is fine), and save it.
-4. Type `git init` in the terminal; this will create the repository. You can see all the files in your folder (even the hidden ones), by using `ls -a`, you so you can use this to see the new folder called `.git` that was created when you ran `git init`.
-5.  Type `git add ReadMe.txt` to tell Git to start tracking the `ReadMe.txt` file and to include this file in the next commit (i.e. to add it to the staging area).  If you want, try entering `git status` before you do this step and then again afterwards to see what changes.
-6. Make a first commit by typing: 
+4. Type `git init` in the terminal; this will create the repository. You can see all the files in your folder (even the hidden ones), by using `ls -a`, you so you can use this to see the new folder called `.git` that was created when you ran `git init`. 
+6.  Type `git add ReadMe.txt` to tell Git to start tracking the `ReadMe.txt` file and to include this file in the next commit (i.e. to add it to the staging area).  If you want, try entering `git status` before you do this step and then again afterwards to see what changes.
+7. If you weren't able to configure your default branch name to be `main`, then the output of `git status` may tell you that you are on branch `master`. If that's the case, type `git checkout -b main` to move to a branch called `main`. Do this before you make your first commit in Step 8.
+8. Make a first commit by typing: 
     `git commit -m "this is my first commit!`
 
 
@@ -34,7 +40,7 @@ See part VI on forking a repository.
 
     `git remote add origin https://github.com/username/new_repo`
 
-    `git push -u origin master`
+    `git push -u origin main`
 
 4. Check that the example file you made in part I should shows up in your account on GitHub! (You should see it under the code tab.)
 
@@ -60,10 +66,10 @@ Since `fetch` just retrieves the changes and doesn't do anything with them, it's
 2. We'll use `git merge` to combine any changes that you just fetched into your local files.  This means that if a collaborator changed some lines of code and put those changes on GitHub,
 when you merge, you'd get their revised version on your computer. Type:
 
-    `git merge origin/master`
+    `git merge origin/main`
 
     Note: we don't expect anything exciting to happen in this particular example, since our local repository already matched the remote reposity.  We're just practicing the basic workflow for now.
-    Recall that `origin `refers to the remote repository up on GitHub.  `master` refers to the *branch* that we're on; we'll learn about branches later on.
+    Recall that `origin `refers to the remote repository up on GitHub.  `main` refers to the *branch* that we're on; we'll learn about branches later on.
 
 3. Make changes to your local repository.  This is where you're doing your coding, adding new features, and fixing features that need to be fixed!  To simulate that process for now, just make a small change by opening up `ReadMe.txt` and editing the text a bit.
 
@@ -100,11 +106,11 @@ Type:
 
     Then type:
 
-    `git merge origin/master`
+    `git merge origin/main`
 
 7. All of your committing just saved changes locally.  Now you need to send those changes off to the remote repository on GitHub (remember that the remote repository has the short name `origin`).  We'll send our changes off to the remote repository with the `git push` command.  Type:
 
-    `git push origin master`
+    `git push origin main`
 
     If you go to your GitHub account in your web browser, you should now be able to see the most recent changes you made now included in your files.
 
@@ -112,9 +118,9 @@ Type:
 
 9. *(Optional)* Practice undoing a commit. There are several different ways you might want to "undo" something in Git, and several corresponding commands. One nondestructive way to undo a commit is with `git revert HEAD`, which will create a new commit that is the inverse of the previous commit. This will take your code back to the state it was in before (but will still keep a record of the previous commit that you chose to "undo").
 
-10. *(Optional)* Now let's practice looking back at the state of your project in an older commit. Make sure you have committed all of your changes, and then type something like `git checkout 66e77`, where the numbers and digits are the first few characters of the hash for one of your commits – find them by typing `git log` and picking a commit to go back to. Your files will change to the state they were in for the commit you just checked out - take a look around and notice how your files have all changed to their older versions from the commit you checked out! You are now working in a detached HEAD state - you can look around and explore, but while in this state you don't want to develop or make any changes that you'd want to keep. Before you keep developing and editing, move back to where you were working (in this case the master branch) with: 
+10. *(Optional)* Now let's practice looking back at the state of your project in an older commit. Make sure you have committed all of your changes, and then type something like `git checkout 66e77`, where the numbers and digits are the first few characters of the hash for one of your commits – find them by typing `git log` and picking a commit to go back to. Your files will change to the state they were in for the commit you just checked out - take a look around and notice how your files have all changed to their older versions from the commit you checked out! You are now working in a detached HEAD state - you can look around and explore, but while in this state you don't want to develop or make any changes that you'd want to keep. Before you keep developing and editing, move back to where you were working (in this case the main branch) with: 
 
-    `git checkout master`
+    `git checkout main`
 
 Great work! Take a moment to celebrate. If you are working by yourself or in a small team, that might be your entire workflow with Git and GitHub! 
 
@@ -123,7 +129,7 @@ post a reference to the commands somewhere handy and keep in mind the overall fl
 
 `git fetch origin`
 
-`git merge origin/master`
+`git merge origin/main`
 
 (Edit your files)
 
@@ -147,22 +153,22 @@ post a reference to the commands somewhere handy and keep in mind the overall fl
 
 `git fetch origin`
 
-`git merge origin/master`
+`git merge origin/main`
 
-`git push origin master`
+`git push origin main`
 
 ### Alternatives:
 
 The `pull` command combines fetching and merging into one command.  It is somewhat safer to fetch and merge separately, so that you can examine the changes that the fetch has retrieved before merging them.  Thus, fetching and merging separately is recommended.
 
-In incorporating changes that have been fetched, and alternative to merging is rebasing.  Some people prefer to rebase because it preserves a linear history (look up git merge vs. rebase to learm more about this topic). If you prefer to rebase instead of merge, replace all the `git merge` statements in this document with `git rebase` (e.g. `git rebase origin/master` instead of `git merge origin/master`)
+In incorporating changes that have been fetched, and alternative to merging is rebasing.  Some people prefer to rebase because it preserves a linear history (look up git merge vs. rebase to learm more about this topic). If you prefer to rebase instead of merge, replace all the `git merge` statements in this document with `git rebase` (e.g. `git rebase origin/main` instead of `git merge origin/main`)
 
  <div style="page-break-after: always;"></div>
 <br>
 
 ## IV. Dealing with merge conflicts.
 
-Now let's suppose you are working with a collaborator, and you are both editing your local versions of the repository and pushing those changes to the remote repository. If you are working on different parts of the code, then merging in your collaborator's changes will be very smooth; when you do `git fetch` and `git merge origin/master`, your local files will be updated so that they include your collaborator's changes.  However, if you both have made changes to the same line of code, you will get what is called a **merge conflict** when you do the `git merge` step.  You will need to resolve the conflict before you continue. If you've tried a merge command and got a message that there was a merge conflict, you can do the following.
+Now let's suppose you are working with a collaborator, and you are both editing your local versions of the repository and pushing those changes to the remote repository. If you are working on different parts of the code, then merging in your collaborator's changes will be very smooth; when you do `git fetch` and `git merge origin/main`, your local files will be updated so that they include your collaborator's changes.  However, if you both have made changes to the same line of code, you will get what is called a **merge conflict** when you do the `git merge` step.  You will need to resolve the conflict before you continue. If you've tried a merge command and got a message that there was a merge conflict, you can do the following.
 
 1. Type `git status`, if you like, to see a little more information.  (Remember, `git status` is informative and doesn't change the state of anything).
 
@@ -178,7 +184,7 @@ This is the other version of this line.
 more content
 ```
 
-The text between <<<< and >>>>>> is showing you both (conflicting!) versions of the line. The first part is the version in the current branch.  The second version, after the `======`, comes from the branch you were trying to merge.  So if you had started the merge with `git merge origin/master`, you'd see your changes on the current branch above the `======`, and the changes that you retrieved from the master branch of your remote repository below the `======` (these would likely be changes from a collaborator).
+The text between <<<< and >>>>>> is showing you both (conflicting!) versions of the line. The first part is the version in the current branch.  The second version, after the `======`, comes from the branch you were trying to merge.  So if you had started the merge with `git merge origin/main`, you'd see your changes on the current branch above the `======`, and the changes that you retrieved from the main branch of your remote repository below the `======` (these would likely be changes from a collaborator).
 
 3. Edit the file in the text editor so the conflicted line looks how you want it to be.  Maybe you keep one of the existing versions of the lie or maybe you replace them both with a mix of the two or something better. In the end, the file should look just how you want it to look going forward (with no more <<<< or ==== type extras!).  Save the file. If you have multiple conflicts and/or conflicts in multiple files, edit each conflicted line in this way.
 
@@ -200,13 +206,13 @@ The text between <<<< and >>>>>> is showing you both (conflicting!) versions of 
 
 ## V. A workflow with branches and pull requests
 
-As your project or your team gets larger, you may want to separate out work on different features of your project from the main project itself. You also might want to have someone review a team member's committed changes before they get incorporated into the master branch of the remote repository. In general, using branches and pull requests promotes code quality by helping us avoid changing the master branch until we have something worthwhile and high quality to add. They also promotes collaboration by allowing space for collaborators to have a discussion before including someone's change into the master branch of the remote repository.
+As your project or your team gets larger, you may want to separate out work on different features of your project from the main project itself. You also might want to have someone review a team member's committed changes before they get incorporated into the main branch of the remote repository. In general, using branches and pull requests promotes code quality by helping us avoid changing the main branch until we have something worthwhile and high quality to add. They also promotes collaboration by allowing space for collaborators to have a discussion before including someone's change into the main branch of the remote repository.
 
 1. Retrieve and incorporate any changes from the remote repository with:
 
     `git fetch origin`
 
-    `git merge origin/master`
+    `git merge origin/main`
 
     Resolve merge conflicts if necessary.
 
@@ -235,7 +241,7 @@ As your project or your team gets larger, you may want to separate out work on d
 
     `git fetch origin`
 
-    `git merge origin/master`
+    `git merge origin/main`
 
     Resolve merge conflicts if necessary.
 
@@ -243,19 +249,19 @@ As your project or your team gets larger, you may want to separate out work on d
 
     `git push -u origin mybranchname`
 
-    This is a different way to use `push` than we did earlier.  Before, we used `git push origin master` to push our changes directly to the master branch.  Now, we're being a little more cautious; we are still pushing our changes to the remote repository, but we're pushing not to the master branch but to a branch in the remote repository that corresponds to the local branch that you created in step 2.  (Note, the `-u` flag tells git to actually *create* this branch in the remote repository, linked with the local branch you created in step 2.)
+    This is a different way to use `push` than we did earlier.  Before, we used `git push origin main` to push our changes directly to the main branch.  Now, we're being a little more cautious; we are still pushing our changes to the remote repository, but we're pushing not to the main branch but to a branch in the remote repository that corresponds to the local branch that you created in step 2.  (Note, the `-u` flag tells git to actually *create* this branch in the remote repository, linked with the local branch you created in step 2.)
 
-10. If you think the changes you made on this branch and pushed to the remote repository are ready to be incorporated into the master branch, you can use GitHub ask the owners of the repository (you or teammates), to incorporate the changes from that branch into the master branch of the remote repository.  You'll do this with *pull request* on GitHub.
+10. If you think the changes you made on this branch and pushed to the remote repository are ready to be incorporated into the main branch, you can use GitHub ask the owners of the repository (you or teammates), to incorporate the changes from that branch into the main branch of the remote repository.  You'll do this with *pull request* on GitHub.
 
     Navigate to your GitHub account and the repository in your web browser.  In yellow, you'll see "your recently pushed branches:".  Click on "Compare & Pull" request in the top left to make the pull request, including a message to your project teammates when prompted.
 
-11. At this step of the workflow, you and your team have various options for how to impose quality control for your code. A typical approach would be to wait for a teammate to review your changes and approve merging them into the master branch (your teammate might give feedback for you to respond to before merging).  The pull request allows the opportunity for a dialog between team members before including the changes that one person has made.  You can also use GitHub Actions to create automated checks that could including running tests that you create, or syntax checks, anytime someone creates a pull request.
+11. At this step of the workflow, you and your team have various options for how to impose quality control for your code. A typical approach would be to wait for a teammate to review your changes and approve merging them into the main branch (your teammate might give feedback for you to respond to before merging).  The pull request allows the opportunity for a dialog between team members before including the changes that one person has made.  You can also use GitHub Actions to create automated checks that could including running tests that you create, or syntax checks, anytime someone creates a pull request.
 
     If you are an owner of the repository, you *can* approve and merge your own pull request.  For practice, use GitHub to approve and merge the pull request, and then delete the remote branch that you created in step 9.
 
-12. **After your changes were successfully merged** into the master branch of remote repository, and you're all done with this branch, move back to the master branch locally with:
+12. **After your changes were successfully merged** into the main branch of remote repository, and you're all done with this branch, move back to the main branch locally with:
     
-    `git checkout master`
+    `git checkout main`
 
     And then delete the local branch that you created in step 2 with:
 
@@ -264,11 +270,11 @@ As your project or your team gets larger, you may want to separate out work on d
     The `-d` flag indicates that you are deleting the branch.
 
 
-13. Get the changes that you pushed and merged into the master branch of the remote repository into the master branch of your local repository with: 
+13. Get the changes that you pushed and merged into the main branch of the remote repository into the main branch of your local repository with: 
 
     `git fetch origin`
 
-    `git merge origin/master`
+    `git merge origin/main`
 
 
 Great work!  Including Git branches and GitHub pull requests in your process takes a little more work, but it can pay real dividends by improving your collaboration and allowing you to include more checks to help maintain high quality code.
@@ -308,15 +314,15 @@ Now let's say you want to contribute to someone else's project, but you're not a
 
 5. Push the committed changes to your own remote repository on your GitHub account (recall that it has the short name `origin`), by typing:
 
-    `git push origin master`
+    `git push origin main`
 
 6. On GitHub, go to the repository on your account, and click the "Pull Request" button, you'll see both your repository and the original.  Your pull request is asking the owner of the original to include you your changes into their project.  You will see both their repository and yours.  Write a helpful message about what changes you have made.  If the other developer thnks your changes make sense to include, they can merge the pull request.  If not, they can choose not to, or can write back asking you to make some changes before they merge it.
 
-7. In the future, the upstream project is likely to continue to evolve without you. So, if you want to make more contributions later on start by fetching and merging from the original project repo first, to make sure your version of the project is up to date with the master branch of the upstream project.  We can do this with:
+7. In the future, the upstream project is likely to continue to evolve without you. So, if you want to make more contributions later on start by fetching and merging from the original project repo first, to make sure your version of the project is up to date with the main branch of the upstream project.  We can do this with:
 
     `git fetch upstream`
 
-    `git merge upstream/master`
+    `git merge upstream/main`
 
     (Here upstream refers to the original repository on someone else's GitHub account.)
 
