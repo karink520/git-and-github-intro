@@ -10,16 +10,18 @@ You can find it with a Spotlight Search or in the Utilities folder within the Ap
 
    `git --version`
    
-   If you get a message back in the terminal like `git version 2.27.0`, that means you've successfully installed Git (even if your version number is slightly different from this example).  If you get something else back in the terminal, such as `-bash: git: command not found`, it means there has been a problem.
- 4. Configure Git with your name and email by entering the following two lines in the Terminal (hitting Return after each one), subsituting your own name and email instead of `Karin Knudson` and `karin.knudson@tufts.edu`
+   If you get a message back in the terminal like `git version 2.31.1`, that means you've successfully installed Git (even if your version number is slightly different from this example).  If you get something else back in the terminal, such as `-bash: git: command not found`, it means there has been a problem.
+ 4. Configure Git by entering the following three lines in the Terminal (hitting Return after each one), subsituting your own name and email instead of `Karin Knudson` and `karin.knudson@tufts.edu`. 
 
     `git config --global user.name "Karin Knudson"`
 
     `git config --global user.email "karin.knudson@tufts.edu"`
 
-    This configuration will set up Git to associate your name and email to changes that you commit to your project.
+    `git config --global init.defaultBranch main`
+    
+The first two lines of this configuration will set up Git to associate your name and email to changes that you commit to your project, and the third one will set the default branch name to be `main`. Note: `git config --global init.defaultBranch main` will only work with Git version 2.28.0 or later. 
 
-Troubleshooting: You may not be able to complete the preceding steps if you're running an older MacOS, such as 10.12 or earlier.  In this case, you can update your MacOS first (note that this may take some time and require a restart), and then follow the steps above.
+Troubleshooting: You may not be able to complete the preceding steps if you're running an older MacOS, such as 10.12 or earlier.  In this case, you can update your MacOS first (note that this may take some time and require a restart), and then follow the steps above. 
 
 ## Linux
 
@@ -34,22 +36,27 @@ Troubleshooting: You may not be able to complete the preceding steps if you're r
    
    If you get a message back in the terminal like `git version 2.27.0`, that means you've successfully installed Git (even if your version number is slightly different from this example).  If you get something else back in the terminal, such as `-bash: git: command not found`, it means there has been a problem.
 
- 3. Configure Git with your name and email by entering the following two lines in the terminal (hitting Eeturn after each one), subsituting your own name and email instead of `Karin Knudson` and `karin.knudson@tufts.edu`
+ 3. Configure Git by entering the following three lines in the Terminal (hitting Return after each one), subsituting your own name and email instead of `Karin Knudson` and `karin.knudson@tufts.edu`. 
 
     `git config --global user.name "Karin Knudson"`
 
     `git config --global user.email "karin.knudson@tufts.edu"`
 
-    This configuration will set up Git to associate your name and email to changes that you commit to your project.
+    `git config --global init.defaultBranch main`
+    
+The first two lines of this configuration will set up Git to associate your name and email to changes that you commit to your project, and the third one will set the default branch name to be `main`. Note: `git config --global init.defaultBranch main` will only work with Git version 2.28.0 or later. 
+
 
 ## Windows
 
  1. Download Git for Windows [here](https://gitforwindows.org/).
  2. Start the installer and follow the instructions (the default settings should work fine).
- 3. Open the Command Prompt or Git Bash (Git Bash comes along with Git for Windows).  Configure Git with your name and email by entering the following two lines (hitting Enter after each one), subsituting your own name and email instead of `Karin Knudson` and `karin.knudson@tufts.edu`
+ 3. Open the Command Prompt or Git Bash (Git Bash comes along with Git for Windows).   Configure Git by entering the following three lines in the Terminal (hitting Return after each one), subsituting your own name and email instead of `Karin Knudson` and `karin.knudson@tufts.edu`. 
 
     `git config --global user.name "Karin Knudson"`
 
     `git config --global user.email "karin.knudson@tufts.edu"`
 
-     This configuration will set up Git to associate your name and email to changes that you commit to your project.
+    `git config --global init.defaultBranch main`
+    
+The first two lines of this configuration will set up Git to associate your name and email to changes that you commit to your project, and the third one will set the default branch name to be `main`. Note: `git config --global init.defaultBranch main` will only work with Git version 2.28.0 or later. 
