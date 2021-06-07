@@ -1,28 +1,43 @@
 ## Description
 
-Git and GitHub are valuable tools for any researchers who work with code.  They allow for version control, facilitate collaboration, and can help you make your research code better, safer, and more impactful in the broader community. This workshop is a practical introduction to Git and GitHub, intended to give participants the information and practice they need to start using these tools right away.
+The goal of this workshop is to introduce students to the concepts and practice of Bayesian modeling.   We will begin by motivating Bayesian approaches.  Next,  we will introduce and apply models with conjugate priors,  such as Bayesian normal,  Bayesian binomial,  and Bayesian linear regression.   We will then introduce the two primary techniques for approximate Bayesian inference,  namely Markov Chain Monte Carlo (MCMC) and variational inference.    Using these techniques,  and in some cases clever trickery,  we will then tackle models for which there are not conjugate priors,  such as Bayesian logistic regression,  Bayesian multiclass regression,  Bayesian mixture models,  and Bayesian hidden Markov models.  Finally,  we will very briefly discuss Bayesian deep learning.    For applications,  we will use Python; namely,  a combination of  pymc3,  scikit-learn,  and code we write ourselves. 
 
-## Goals
+## Instructors
 
-<ul>
-  <li> Understand how Git and GitHub can be useful to you and your team </li>
-  <li> Set up Git for a new or existing project </li>
-  <li> Learn and practice a simple workflow with Git and GitHub </li>
-  <li> Learn and practice a more complex workflow for collaboration with branches and pull requests</li>
-  <li> Be able to contribute to open source projects that are on GitHub</li>
-</ul>
+* Dr. Michael Mojnowicz
+* Dr. Karin Knudson
 
-## Before the workshop
+## Syllabus
 
-1. If you have never used the terminal / command prompt before, go through this [introductory tutorial](https://tutorial.djangogirls.org/en/intro_to_command_line/). The commands you will need to know for this course are ls (for Mac and Linux users), dir (for Windows users), and cd (for everyone). (15 min)
-2. Install Git, following these [instructions](install_git.md). (10 min)
-3. Create an account on [GitHub](https://github.com). (5 min)
+[Syllabus](syllabus/bayesian_modeling_workshop.pdf)
 
-Pre-course video-conference office hours:
-TBD: Please drop in with any questions, or if you run into trouble with the pre-workshop steps
+## Slides
 
-## Workshop materials
-[Slides](git_workshop_slides.pdf)
+[Why Bayes?](
+[Bayesian Inference: Intro to Conjugacy](slides/intro_to_inference/bayes_intro.pdf)
+[Bayesian Multivariate Normal](slides/mvn/bayesian_multivariate_normal/bm_multivariate_normal.pdf)
+[Sampling and MCMC Methods](slides/why_bayes/bm_why_bayes.pdf)
 
-[Workshop instructions](git_workshop.md)
+
+## Exercises
+
+### Philosophy
+
+Why have exercises as a part of the course, as opposed to just further lecture?
+
+* Working actively with the material will help you to better understand it, find good questions to ask, 
+and be better prepared for the next sections.
+
+Why have a lab as a part of the course, as opposed to just working on your own time? 
+
+* Opportunity to collaborate in groups.
+* Get real-time feedback from instructors.
+
+### Exercises
+
+* [Intro to Bayesian Inference](https://colab.research.google.com/drive/1-hDJ7wrVanBuDluSUVYV-RVzmIu9H1WP)
+* [Bayesian Multivariate Normal](https://colab.research.google.com/drive/14gonFUtSGcn8G3pApOEu-5YIaGk0swUQ#scrollTo=wsNeq0W17gDt)
+* [Sampling and MCMC Methods](https://colab.research.google.com/drive/1SGXi4w6_gPioqcgyMXhrBWLM78KyySHl?usp=sharing)
+* More soon...
+
 
