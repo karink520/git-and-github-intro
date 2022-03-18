@@ -394,7 +394,7 @@ This [tutorial](https://kbroman.org/github_tutorial/) bills itself as “a minim
 [Atlassian's tutorial site](https://www.atlassian.com/git/tutorials) includes detailed guides about Git. Atlassian makes BitBucket, which is another web-based hosting system for version control repositories and an alternative to GitHub.  The the tutorials around Git itself are applicable to both GitHub and BitBucket. They also have
  a helpful [Git cheat-sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 
-A [lecture](https://missing.csail.mit.edu/2020/version-control/) from MIT CSAIL's "Missing Semester", a lecture and bottom-up explanation of Git that is very helpful if you want to understand how Git works behind its interface.
+A [lecture](https://missing.csail.mit.edu/2020/version-control/) from MIT CSAIL's "Missing Semester", a lecture and bottom-up explanation of Git that is very helpful if you want to understand how Git works behind its interface. Their [git command line interface](https://missing.csail.mit.edu/2020/version-control/#git-command-line-interface) is also a good quick reference.
 
 [Pro Git](https://git-scm.com/book/en/v2) (book, available free online) is a thorough resource.
 
