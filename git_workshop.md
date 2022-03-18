@@ -42,6 +42,8 @@ See part VI on forking a repository.
     `git remote add origin https://github.com/username/new_repo`
 
     `git push -u origin main`
+    
+If you need to enter a password, copy the personal access token you created in step 2.
 
 5. Check that the example file you made in part I should shows up in your account on GitHub! (You should see it under the code tab.)
 
