@@ -35,7 +35,7 @@ See part VI on forking a repository.
 ## II. Connect your new repository to GitHub
 
 1. Log in to GitHub.
-2. Create a personal access token by going to https://github.com/settings/tokens (you can also navigate here by going to Settings>Developer Settings>Personal Access Tokens), click "Generate New Token", check the appropriate boxes and follow the prompts. When you see your personal access token, you should copy it for use in step 4 below. (Note: you can additionally or alternatively set up SSH access by following the sequence of instructions under "Connect With SSH" [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)
+2. If you have not yet done so, create a personal access token by going to https://github.com/settings/tokens (you can also navigate here by going to Settings>Developer Settings>Personal Access Tokens), click "Generate New Token", check the appropriate boxes and follow the prompts. When you see your personal access token, you should copy it for use in step 4 below. (Note: you can additionally or alternatively set up SSH access by following the sequence of instructions under "Connect With SSH" [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys).
 3. Click "New" in the upper left and fill out the form to give your repository a name.
 4. Follow the instructions under "Push an  existing repository", which will ask you to enter some code back in the terminal/command line that is analogous to the following, but with your own repository url filled in:
 
