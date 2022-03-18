@@ -35,14 +35,15 @@ See part VI on forking a repository.
 ## II. Connect your new repository to GitHub
 
 1. Log in to GitHub.
-2. Click "New" in the upper left and fill out the form to give your repository a name.
-3. Follow the instructions under "Push an  existing repository", which will ask you to enter some code back in the terminal/command line that is analogous to the following, but with your own repository url filled in:
+2. Create a personal access token by going to https://github.com/settings/tokens (you can also navigate here by going to Settings>Developer Settings>Personal Access Tokens), click "Generate New Token", check the appropriate boxes and follow the prompts. When you see your personal access token, you should copy it for use in step 4 below. (Note: you can additionally or alternatively set up SSH access by following the sequence of instructions under "Connect With SSH" [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)
+3. Click "New" in the upper left and fill out the form to give your repository a name.
+4. Follow the instructions under "Push an  existing repository", which will ask you to enter some code back in the terminal/command line that is analogous to the following, but with your own repository url filled in:
 
     `git remote add origin https://github.com/username/new_repo`
 
     `git push -u origin main`
 
-4. Check that the example file you made in part I should shows up in your account on GitHub! (You should see it under the code tab.)
+5. Check that the example file you made in part I should shows up in your account on GitHub! (You should see it under the code tab.)
 
 You now have a local repository on your computer that is connected to a remote repository on GitHub.
 In step 3, we followed convention by giving the remote repository the short name of `origin` (its longer name is something like `https://github.com/username/new_repo`, but we don't want to type that out all the time!). When you see `origin` throughout this workshop, you should be thinking about the repository living remotely, on GitHub, rather than the the local one on your computer.
@@ -89,7 +90,7 @@ Type:
     If you have more than one file you've changed (usually you do!) just use a  `git add` command on each separate file.  Once you're done, you can
     use `git status` again to double check that you successfully staged the updated file(s).
 
-    c. Do the commit.  This is making a checkpoint that you can roll back to in the future.  Since you staged all the files that you changed, this commit will include all the most recent changes in your files. You will attach a descriptive message to the commit, which will help create a nice record of your work.
+    c. Do the commit.  This is making a checkpoint that you can roll back to in the future.  Since you (hopefully!) staged all the files that you changed, this commit will include all the most recent changes in your files. You will attach a descriptive message to the commit, which will help create a nice record of your work.
     Type:
 
     `git commit -m "Made my readme better, hooray!"`
@@ -206,7 +207,7 @@ The text between <<<< and >>>>>> is showing you both (conflicting!) versions of 
 
 ## V. A workflow with branches and pull requests
 
-As your project or your team gets larger, you may want to separate out work on different features of your project from the main project itself. You also might want to have someone review a team member's committed changes before they get incorporated into the main branch of the remote repository. In general, using branches and pull requests promotes code quality by helping us avoid changing the main branch until we have something worthwhile and high quality to add. They also promotes collaboration by allowing space for collaborators to have a discussion before including someone's change into the main branch of the remote repository.
+As your project or your team gets larger, you may want to separate out work on different features of your project from the main project itself. You also might want to have someone review a team member's committed changes before they get incorporated into the main branch of the remote repository. In general, using branches and pull requests promotes code quality by helping us avoid changing the main branch until we have something worthwhile and high quality to add. They also promotes collaboration by allowing space for collaborators to have a discussion before including someone's change into the main branch of the remote repository. 
 
 1. Retrieve and incorporate any changes from the remote repository with:
 
@@ -277,9 +278,9 @@ As your project or your team gets larger, you may want to separate out work on d
     `git merge origin/main`
 
 
-Great work!  Including Git branches and GitHub pull requests in your process takes a little more work, but it can pay real dividends by improving your collaboration and allowing you to include more checks to help maintain high quality code.
+Great work!  Including Git branches and GitHub pull requests in your process takes a little more work, but it can pay real dividends by improving your collaboration and allowing you to include more checks to help maintain high quality code. Here is a [reference/explainer](https://karinknudson.com/git_workflow.html) for the workflow we just went through.
 
-To add a collaborator to a repository on GitHub, you can navigate to the page for the repository and click 'Settings', which is the rightmost tab.  Select "Manage access" from the menu on the left, and then click the green "Invite a collaborator" button.  You'll need to know your collaborator's GitHub username. (Note: 'Manage access' is also where you can make a repository private vs. public, if you'd like.)
+To **add a collaborator** to a repository on GitHub, you can navigate to the page for the repository and click 'Settings', which is the rightmost tab.  Select "Manage access" from the menu on the left, and then click the green "Invite a collaborator" button.  You'll need to know your collaborator's GitHub username. (Note: 'Manage access' is also where you can make a repository private vs. public, if you'd like.)
 
 If time allows, try adding others from your breakout groups as collaborators. Practice with your teammates the workflow above, where one person creates a branch, edits, commits, pushes changes, and makes a pull request (steps 1-10), another persom reviews and merges the changes (step 11), and the first person cleans up their local repository and make sure it includes the new changes (step 12-13). You can also purposefully create some merge conflicts and practice resolving them.
 
